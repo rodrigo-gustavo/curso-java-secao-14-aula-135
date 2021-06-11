@@ -1,7 +1,7 @@
 package entities;
 
 public class Individual extends TaxPlayer {
-	
+
 	private Double healthExpenditures;
 
 	public Individual(String name, Double anualIncome, Double healthExpenditures) {
@@ -16,7 +16,7 @@ public class Individual extends TaxPlayer {
 	public void setHealthExpenditures(Double healthExpenditures) {
 		this.healthExpenditures = healthExpenditures;
 	}
-	
+
 	@Override
 	public Double tax() {
 		if (getAnualIncome() <= 0.0) {
@@ -27,6 +27,5 @@ public class Individual extends TaxPlayer {
 			return getAnualIncome() * 0.25 - healthExpenditures * 0.5;
 		}
 	}
-	
-	
+
 }
